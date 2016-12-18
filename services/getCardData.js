@@ -3,7 +3,7 @@ import request from 'superagent'
 export default (state, dispatch) => {
   var card = ''
   request
-    .get(`http://yugiohprices.com/api/card_data/${state.search}`)
+    .get(`https://yugiohprices.com/api/card_data/${state.search}`)
     .end((err, res) => {
       if (!err) {
         card = res.body.data
